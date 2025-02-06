@@ -19,12 +19,12 @@ public class HelloController {
     @GetMapping("/hello-model")
     public String hello(Model model) {
         model.addAttribute("nome", "Rian Lucas Com Model");
-        return "hello";//renderiza a pagina
+        return "hello";
     }
 
     @GetMapping("/hello-mv")
     public ModelAndView hello() {
-        ModelAndView mv = new ModelAndView("hello"); // renderiza a pagina passando o nome no parametro
+        ModelAndView mv = new ModelAndView("hello");
         mv.addObject("nome", "Rian Lucas Com ModelAndView");
         return mv;
     }
